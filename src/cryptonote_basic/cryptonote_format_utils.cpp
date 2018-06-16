@@ -732,15 +732,15 @@ namespace cryptonote
     switch (std::atomic_load(&default_decimal_point))
     {
       case 12:
-        return "monero";
+        return "lari";
       case 9:
-        return "millinero";
+        return "millilari";
       case 6:
-        return "micronero";
+        return "microlari";
       case 3:
-        return "nanonero";
+        return "nanolari";
       case 0:
-        return "piconero";
+        return "picolari";
       default:
         ASSERT_MES_AND_THROW("Invalid decimal point specification: " << default_decimal_point);
     }
