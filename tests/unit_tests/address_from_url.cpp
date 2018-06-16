@@ -39,7 +39,7 @@ TEST(AddressFromTXT, Success)
 {
   std::string addr = "WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs";
 
-  std::string txtr = "oa1:aeon";
+  std::string txtr = "oa1:lari";
   txtr += " recipient_address=";
   txtr += addr;
   txtr += ";";
@@ -58,7 +58,7 @@ TEST(AddressFromTXT, Success)
 
   EXPECT_STREQ(addr.c_str(), res.c_str());
 
-  std::string txtr3 = "foobar oa1:aeon tx_description=\"Donation for Aeon Development Fund\"; ";
+  std::string txtr3 = "foobar oa1:lari tx_description=\"Donation for Lari Development Fund\"; ";
   txtr3 += "recipient_address=";
   txtr3 += addr;
   txtr3 += "; foobar";
@@ -70,7 +70,7 @@ TEST(AddressFromTXT, Success)
 
 TEST(AddressFromTXT, Failure)
 {
-  std::string txtr = "oa1:aeon recipient_address=not a real address";
+  std::string txtr = "oa1:lari recipient_address=not a real address";
 
   std::string res = tools::dns_utils::address_from_txt_record(txtr);
 
@@ -84,7 +84,7 @@ TEST(AddressFromTXT, Failure)
 
 TEST(AddressFromURL, Success)
 {
-  const std::string addr = AEON_DONATION_ADDR;
+  const std::string addr = LARI_DONATION_ADDR;
   
   bool dnssec_result = false;
 

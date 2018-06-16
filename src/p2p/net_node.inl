@@ -371,17 +371,23 @@ namespace nodetool
     std::set<std::string> full_addrs;
     if (nettype == cryptonote::TESTNET)
     {
-      full_addrs.insert("192.168.0.210:21180");
+		full_addrs.insert("76.111.72.224:26180");
+		full_addrs.insert("76.111.72.225:26180");
+		full_addrs.insert("91.210.166.39:26180");
      
     }
     else if (nettype == cryptonote::STAGENET)
     {
-      full_addrs.insert("192.168.0.210:31180");
+		full_addrs.insert("76.111.72.224:36180");
+		full_addrs.insert("76.111.72.225:36180");
+		full_addrs.insert("91.210.166.39:36180");
 
     }
     else
     {
-      full_addrs.insert("192.168.0.210:11180");
+		full_addrs.insert("76.111.72.224:16180");
+		full_addrs.insert("76.111.72.225:16180");
+		full_addrs.insert("91.210.166.39:16180");
 
     }
     return full_addrs;
