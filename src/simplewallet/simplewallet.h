@@ -51,7 +51,7 @@
 #undef MONERO_DEFAULT_LOG_CATEGORY
 #define MONERO_DEFAULT_LOG_CATEGORY "wallet.simplewallet"
 // Hardcode Monero's donation address (see #1447)
-constexpr const char LARI_DONATION_ADDR[] = "";
+constexpr const char LARI_DONATION_ADDR[] = "XcNhq1VsEU7CaYe8ohVj2iiULhmjZJVNTfabSfFy5cRv7mZbvX33FSnKdYmLR2gEQKEyRieKzTswigzLzHbaY2H91688H4Bo9";
 
 /*!
  * \namespace cryptonote

@@ -110,7 +110,7 @@ using namespace cryptonote;
 
 #define MULTISIG_EXPORT_FILE_MAGIC "Monero multisig export\001"
 
-#define SEGREGATION_FORK_HEIGHT 1546000
+#define SEGREGATION_FORK_HEIGHT 1546000 
 #define TESTNET_SEGREGATION_FORK_HEIGHT 1000000
 #define STAGENET_SEGREGATION_FORK_HEIGHT 1000000
 #define SEGREGATION_FORK_VICINITY 1500 /* blocks */
@@ -10239,13 +10239,13 @@ std::string wallet2::make_uri(const std::string &address, const std::string &pay
 //----------------------------------------------------------------------------------------------------
 bool wallet2::parse_uri(const std::string &uri, std::string &address, std::string &payment_id, uint64_t &amount, std::string &tx_description, std::string &recipient_name, std::vector<std::string> &unknown_parameters, std::string &error)
 {
-  if (uri.substr(0, 7) != "lari:")
+  if (uri.substr(0, 5) != "lari:")
   {
     error = std::string("URI has wrong scheme (expected \"lari:\"): ") + uri;
     return false;
   }
 
-  std::string remainder = uri.substr(7);
+  std::string remainder = uri.substr(5);
   const char *ptr = strchr(remainder.c_str(), '?');
   address = ptr ? remainder.substr(0, ptr-remainder.c_str()) : remainder;
 
